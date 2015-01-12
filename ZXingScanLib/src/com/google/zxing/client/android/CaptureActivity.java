@@ -338,44 +338,44 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     return super.onKeyDown(keyCode, event);
   }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater menuInflater = getMenuInflater();
-    menuInflater.inflate(R.menu.capture, menu);
-    return super.onCreateOptionsMenu(menu);
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    Intent intent = new Intent(Intent.ACTION_VIEW);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-    int curId = item.getItemId();
-    if (curId == R.id.menu_share)
-    {
-    	intent.setClassName(this, ShareActivity.class.getName());
-        startActivity(intent);
-    }
-    else if (curId == R.id.menu_history)
-    {
-    	intent.setClassName(this, HistoryActivity.class.getName());
-        startActivityForResult(intent, HISTORY_REQUEST_CODE);
-    }
-    else if (curId == R.id.menu_settings)
-    {
-    	intent.setClassName(this, PreferencesActivity.class.getName());
-        startActivity(intent);
-    }
-    else if (curId == R.id.menu_help)
-    {
-    	intent.setClassName(this, HelpActivity.class.getName());
-        startActivity(intent);
-    }
-    else
-    {
-    	return super.onOptionsItemSelected(item);
-    }
-    return true;
-  }
+//  @Override
+//  public boolean onCreateOptionsMenu(Menu menu) {
+//    MenuInflater menuInflater = getMenuInflater();
+//    menuInflater.inflate(R.menu.capture, menu);
+//    return super.onCreateOptionsMenu(menu);
+//  }
+//
+//  @Override
+//  public boolean onOptionsItemSelected(MenuItem item) {
+//    Intent intent = new Intent(Intent.ACTION_VIEW);
+//    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+//    int curId = item.getItemId();
+//    if (curId == R.id.menu_share)
+//    {
+//    	intent.setClassName(this, ShareActivity.class.getName());
+//        startActivity(intent);
+//    }
+//    else if (curId == R.id.menu_history)
+//    {
+//    	intent.setClassName(this, HistoryActivity.class.getName());
+//        startActivityForResult(intent, HISTORY_REQUEST_CODE);
+//    }
+//    else if (curId == R.id.menu_settings)
+//    {
+//    	intent.setClassName(this, PreferencesActivity.class.getName());
+//        startActivity(intent);
+//    }
+//    else if (curId == R.id.menu_help)
+//    {
+//    	intent.setClassName(this, HelpActivity.class.getName());
+//        startActivity(intent);
+//    }
+//    else
+//    {
+//    	return super.onOptionsItemSelected(item);
+//    }
+//    return true;
+//  }
 
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent intent) {
